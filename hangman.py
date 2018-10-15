@@ -1,5 +1,5 @@
 """
-A simple hangman game.
+A simple guess letters game.
 doesn't include any input data validations
 """
 
