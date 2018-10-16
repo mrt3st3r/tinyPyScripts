@@ -1,5 +1,6 @@
 """
 A simple password genrator.
+Doesnt include invalid user input.
 """
 import names
 import random
