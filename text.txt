@@ -1,0 +1,5 @@
+This is a text file
+in multiple line
+to see the magic python can do!
+Happy Pythoning
+Developed by MrT3sT3r
