@@ -2,7 +2,14 @@ import requests
 from bs4 import BeautifulSoup
 from pprint import pprint
 
+
 def getootbalitarinatestews():
+
+    proxies ={
+        'http_proxy' : 'http://proxy2.isis.airnz.co.nz:5865',
+        'https_proxy': 'https://proxy2.isis.airnz.co.nz:5865'
+    }
+
     urls = requests.get('http://footballitarin.com/links.php')
     urls.raise_for_status()
     baseurl ='http://footballitarin.com/link_page.php'
@@ -13,8 +20,13 @@ def getootbalitarinatestews():
     soup = BeautifulSoup(data, features='lxml')
     latestNews = soup.find_all('div', {'class': 'news_title'})
     # print(f'the length is {len(latestNews)}')
+<<<<<<< HEAD
     with open(newsfile, 'w', encoding="utf-8") as f:
         for l in latestNews:
+=======
+    with open('/Users/asgarh/Desktop/'+fname+'.html', 'w') as f:
+        for _ in latestNews:
+>>>>>>> a764ef882230d0a2894bbf75cc790a6dd8e35256
             for news in latestNews:
                 # print(news)
                 for n in news:
@@ -22,9 +34,18 @@ def getootbalitarinatestews():
                     #str(n).replace('link_page.php', baseurl)
                     f.write("<li>" + str(n).replace('link_page.php', baseurl) + "</li>")
     print('Successfully received the latest news from Footbalitarin Website!\n\n')
+<<<<<<< HEAD
 """
     with open(newsfile, 'r', encoding='utf-8') as f:
         for a in f:
             print(a)
 """
+=======
+
+    with open('/Users/asgarh/Desktop/'+fname+'.html', 'r') as f:
+            for _ in f:
+                pprint(_)
+
+
+>>>>>>> a764ef882230d0a2894bbf75cc790a6dd8e35256
 getootbalitarinatestews()
