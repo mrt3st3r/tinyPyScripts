@@ -14,7 +14,7 @@ def getootbalitarinatestews():
     urls.raise_for_status()
     baseurl ='http://footballitarin.com/link_page.php'
 
-    newsfile = 'C:\\Users\\paarsa\\Desktop\\footbalitarin_latest_news.html'
+    newsfile = 'C:\\Users\\MrT3st3r\\Desktop\\footbalitarin_latest_news.html'
     data = urls.text
     #print(data)
     soup = BeautifulSoup(data, features='lxml')
