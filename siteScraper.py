@@ -6,8 +6,8 @@ from pprint import pprint
 def getootbalitarinatestews():
 
     proxies ={
-        'http_proxy' : 'http://proxy2.isis.airnz.co.nz:5865',
-        'https_proxy': 'https://proxy2.isis.airnz.co.nz:5865'
+        'http_proxy' : 'http://proxyccc.ccc:1234',
+        'https_proxy': 'https://proxyccc.ccc:1233'
     }
 
     urls = requests.get('http://footballitarin.com/links.php')
